@@ -1,9 +1,19 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
+    "target": "es2018",
+    "lib": ["es2018"],
+    "module": "commonjs",
     "rootDir": "./src",
     "outDir": "./lib",
     "declarationDir": "./lib/typings"
   },
-  "exclude": ["node_modules", "__tests__/**", "./lib/**", "vitest.config.ts"]
+  "exclude": [
+    "node_modules",
+    "__tests__/**",
+    "./lib/**",
+    "vitest.config.ts",
+    "src/types/**",
+    "playground/**"
+  ]
 }

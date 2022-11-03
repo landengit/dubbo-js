@@ -1,0 +1,25 @@
+{
+  "name": "@apache/dubbo3-stub/playground",
+  "version": "0.0.0",
+  "private": true,
+  "description": "",
+  "repository": "github:stephenh/ts-proto",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "dependencies": {
+    "@apache/dubbo3-stub": "^0.0.1",
+    "long": "^4.0.0",
+    "protobufjs": "^6.8.8",
+    "ts-proto-descriptors": "^1.7.1"
+  },
+  "devDependencies": {
+    "ts-proto": "^1.116.1",
+    "typescript": "^4.7.4"
+  }
+}

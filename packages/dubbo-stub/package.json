@@ -4,11 +4,17 @@
   "main": "./lib/index.js",
   "types": "./lib/typings/index.d.ts",
   "description": "dubbo-js server based on dubbo3",
+  "bin": {
+    "protoc-gen-ts_proto": "./lib/protoc-gen-dubbojs.js"
+  },
   "keywords": [
     "apache",
     "dubbo3",
     "rpc",
     "nodejs"
   ],
+  "dependencies": {
+    "ts-proto-descriptors": "1.7.1"
+  },
   "license": "Apache-2.0"
 }
