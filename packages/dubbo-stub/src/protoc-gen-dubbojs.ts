@@ -5,22 +5,17 @@ import { readToBuffer } from './util'
 import {
   CodeGeneratorRequest,
   CodeGeneratorResponse,
-  CodeGeneratorResponse_Feature,
-  FileDescriptorProto
+  CodeGeneratorResponse_Feature
 } from 'ts-proto-descriptors'
+import File from './descriptor/FIle'
 
 async function main() {
   const stdin = await readToBuffer(process.stdin)
   const request = CodeGeneratorRequest.decode(stdin)
 
-  const filesToGenerate = request.protoFile
+  const filesToGenerate = request.protoFile.map((file) => new File(file))
   const files = await Promise.all(
-    filesToGenerate.map(async (fileDesc) => {
-      const suffix = `.ts`
-      const moduleName = fileDesc.name.replace('.proto', suffix)
-      // todo dong 2022/11/3  追加生成逻辑
-      return { name: moduleName, content: `hello` }
-    })
+    filesToGenerate.map(async (fileDesc) => fileDesc.genCode())
   )
 
   const response = CodeGeneratorResponse.fromPartial({
