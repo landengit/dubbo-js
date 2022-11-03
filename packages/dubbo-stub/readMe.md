@@ -16,8 +16,8 @@ $ protoc --version  # Ensure compiler version is 3+
 # 操作步骤
 
 ```bash
-protoc --plugin=./protoc-gen-dubbojs_proto --ts_proto_out=. ./simple.proto
-protoc --plugin=/usr/local/bin/protoc-gen-dubbojs --ts_proto_out=. ./simple.proto
+protoc --plugin=./protoc-scene-dubbojs_proto --ts_proto_out=. ./simple.proto
+protoc --plugin=/usr/local/bin/protoc-scene-dubbojs --ts_proto_out=. ./simple.proto
 ```
 
 # Todo

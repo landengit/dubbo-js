@@ -1,2 +1,2 @@
-export * from './google/protobuf/descriptor'
+export * from './google/protobuf/meta'
 export * from './google/protobuf/compiler/plugin'

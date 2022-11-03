@@ -7,7 +7,7 @@ import {
   CodeGeneratorResponse,
   CodeGeneratorResponse_Feature
 } from 'ts-proto-descriptors'
-import File from './descriptor/FIle'
+import File from './meta/FIle'
 
 async function main() {
   const stdin = await readToBuffer(process.stdin)

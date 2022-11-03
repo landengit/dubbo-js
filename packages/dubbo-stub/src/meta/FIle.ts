@@ -23,6 +23,7 @@ export default class File {
    * 生成代码
    */
   genCode(): { name: string; content: string } {
+    // todo dong 2022/11/3  配置抽取；
     const suffix = `.ts`
     const moduleName = this.fileDesc.name.replace('.proto', suffix)
     // todo dong 2022/11/3  追加生成逻辑
