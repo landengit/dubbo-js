@@ -1,0 +1,321 @@
+{
+  "fileToGenerate": ["google/DemoService.proto"],
+  "parameter": "exportCommonSymbols=false,unknownFields=true,usePrototypeForDefaults=true",
+  "protoFile": [
+    {
+      "name": "google/DemoService.proto",
+      "package": "demoservice",
+      "dependency": [],
+      "publicDependency": [],
+      "weakDependency": [],
+      "messageType": [
+        {
+          "name": "HelloRequest",
+          "field": [
+            {
+              "name": "name",
+              "number": 1,
+              "label": "LABEL_OPTIONAL",
+              "type": "TYPE_STRING",
+              "typeName": "",
+              "extendee": "",
+              "defaultValue": "",
+              "oneofIndex": 0,
+              "jsonName": "name",
+              "proto3Optional": false
+            }
+          ],
+          "extension": [],
+          "nestedType": [],
+          "enumType": [],
+          "extensionRange": [],
+          "oneofDecl": [],
+          "reservedRange": [],
+          "reservedName": []
+        },
+        {
+          "name": "HelloReply",
+          "field": [
+            {
+              "name": "message",
+              "number": 1,
+              "label": "LABEL_OPTIONAL",
+              "type": "TYPE_STRING",
+              "typeName": "",
+              "extendee": "",
+              "defaultValue": "",
+              "oneofIndex": 0,
+              "jsonName": "message",
+              "proto3Optional": false
+            }
+          ],
+          "extension": [],
+          "nestedType": [],
+          "enumType": [],
+          "extensionRange": [],
+          "oneofDecl": [],
+          "reservedRange": [],
+          "reservedName": []
+        }
+      ],
+      "enumType": [],
+      "service": [
+        {
+          "name": "DemoService",
+          "method": [
+            {
+              "name": "SayHello",
+              "inputType": ".demoservice.HelloRequest",
+              "outputType": ".demoservice.HelloReply",
+              "options": {
+                "deprecated": false,
+                "idempotencyLevel": "IDEMPOTENCY_UNKNOWN",
+                "uninterpretedOption": []
+              },
+              "clientStreaming": false,
+              "serverStreaming": false
+            }
+          ]
+        }
+      ],
+      "extension": [],
+      "options": {
+        "javaPackage": "org.apache.dubbo.demo",
+        "javaOuterClassname": "DemoServiceProto",
+        "javaMultipleFiles": true,
+        "javaGenerateEqualsAndHash": false,
+        "javaStringCheckUtf8": false,
+        "optimizeFor": "SPEED",
+        "goPackage": "",
+        "ccGenericServices": false,
+        "javaGenericServices": false,
+        "pyGenericServices": false,
+        "phpGenericServices": false,
+        "deprecated": false,
+        "ccEnableArenas": false,
+        "objcClassPrefix": "DEMOSRV",
+        "csharpNamespace": "",
+        "swiftPrefix": "",
+        "phpClassPrefix": "",
+        "phpNamespace": "",
+        "phpMetadataNamespace": "",
+        "rubyPackage": "",
+        "uninterpretedOption": []
+      },
+      "sourceCodeInfo": {
+        "location": [
+          {
+            "path": [],
+            "span": [0, 0, 22, 1],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [12],
+            "span": [0, 0, 18],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [8],
+            "span": [2, 0, 34],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [8, 10],
+            "span": [2, 0, 34],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [8],
+            "span": [3, 0, 46],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [8, 1],
+            "span": [3, 0, 46],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [8],
+            "span": [4, 0, 49],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [8, 8],
+            "span": [4, 0, 49],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [8],
+            "span": [5, 0, 37],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [8, 36],
+            "span": [5, 0, 37],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [2],
+            "span": [7, 0, 20],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 0],
+            "span": [10, 0, 12, 1],
+            "leadingComments": " The demo service definition.\n",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 0, 1],
+            "span": [10, 8, 19],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 0, 2, 0],
+            "span": [11, 2, 53],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 0, 2, 0, 1],
+            "span": [11, 6, 14],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 0, 2, 0, 2],
+            "span": [11, 16, 28],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 0, 2, 0, 3],
+            "span": [11, 39, 49],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 0],
+            "span": [15, 0, 17, 1],
+            "leadingComments": " The request message containing the user's name.\n",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 0, 1],
+            "span": [15, 8, 20],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 0, 2, 0],
+            "span": [16, 2, 18],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 0, 2, 0, 5],
+            "span": [16, 2, 8],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 0, 2, 0, 1],
+            "span": [16, 9, 13],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 0, 2, 0, 3],
+            "span": [16, 16, 17],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 1],
+            "span": [20, 0, 22, 1],
+            "leadingComments": " The response message containing the greetings\n",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 1, 1],
+            "span": [20, 8, 18],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 1, 2, 0],
+            "span": [21, 2, 21],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 1, 2, 0, 5],
+            "span": [21, 2, 8],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 1, 2, 0, 1],
+            "span": [21, 9, 16],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 1, 2, 0, 3],
+            "span": [21, 19, 20],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          }
+        ]
+      },
+      "syntax": "proto3"
+    }
+  ],
+  "compilerVersion": {
+    "major": 3,
+    "minor": 21,
+    "patch": 5,
+    "suffix": ""
+  }
+}

@@ -8,14 +8,18 @@ import {
   CodeGeneratorResponse_Feature
 } from 'ts-proto-descriptors'
 import File from './meta/FIle'
+import { dumpCodeGenRequest } from './util/proto'
 
 async function main() {
   const stdin = await readToBuffer(process.stdin)
   const request = CodeGeneratorRequest.decode(stdin)
-
+  dumpCodeGenRequest('DemoService.json', request)
   const filesToGenerate = request.protoFile.map((file) => new File(file))
+
   const files = await Promise.all(
-    filesToGenerate.map(async (fileDesc) => fileDesc.genCode())
+    filesToGenerate.map((fileDesc) => {
+      return fileDesc.genCode()
+    })
   )
 
   const response = CodeGeneratorResponse.fromPartial({

@@ -19,12 +19,17 @@ export default class File {
     }
   }
 
+  get path(): string {
+    return this.fileDesc.name
+  }
+
   /**
    * 生成代码
    */
   genCode(): { name: string; content: string } {
     // todo dong 2022/11/3  配置抽取；
     const suffix = `.ts`
+    // console.log(this.fileDesc.name, this.fileDesc.package)
     const moduleName = this.fileDesc.name.replace('.proto', suffix)
     // todo dong 2022/11/3  追加生成逻辑
     return { name: moduleName, content: `hello` }
