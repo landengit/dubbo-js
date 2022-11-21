@@ -1,0 +1,1422 @@
+{
+  "fileToGenerate": ["protobuf/DashAPICreds.proto"],
+  "parameter": "exportCommonSymbols=false,unknownFields=true,usePrototypeForDefaults=true",
+  "protoFile": [
+    {
+      "name": "protobuf/DashAPICreds.proto",
+      "package": "rpx",
+      "dependency": [],
+      "publicDependency": [],
+      "weakDependency": [],
+      "messageType": [
+        {
+          "name": "DashFlash",
+          "field": [
+            {
+              "name": "msg",
+              "number": 1,
+              "label": "LABEL_OPTIONAL",
+              "type": "TYPE_STRING",
+              "typeName": "",
+              "extendee": "",
+              "defaultValue": "",
+              "oneofIndex": 0,
+              "jsonName": "msg",
+              "proto3Optional": false
+            },
+            {
+              "name": "type",
+              "number": 2,
+              "label": "LABEL_OPTIONAL",
+              "type": "TYPE_ENUM",
+              "typeName": ".rpx.DashFlash.Type",
+              "extendee": "",
+              "defaultValue": "",
+              "oneofIndex": 0,
+              "jsonName": "type",
+              "proto3Optional": false
+            }
+          ],
+          "extension": [],
+          "nestedType": [],
+          "enumType": [
+            {
+              "name": "Type",
+              "value": [
+                {
+                  "name": "Undefined",
+                  "number": 0
+                },
+                {
+                  "name": "Success",
+                  "number": 1
+                },
+                {
+                  "name": "Warn",
+                  "number": 2
+                },
+                {
+                  "name": "Error",
+                  "number": 3
+                }
+              ],
+              "reservedRange": [],
+              "reservedName": []
+            }
+          ],
+          "extensionRange": [],
+          "oneofDecl": [],
+          "reservedRange": [],
+          "reservedName": []
+        },
+        {
+          "name": "DashUserSettingsState",
+          "field": [
+            {
+              "name": "email",
+              "number": 1,
+              "label": "LABEL_OPTIONAL",
+              "type": "TYPE_STRING",
+              "typeName": "",
+              "extendee": "",
+              "defaultValue": "",
+              "oneofIndex": 0,
+              "jsonName": "email",
+              "proto3Optional": false
+            },
+            {
+              "name": "urls",
+              "number": 6,
+              "label": "LABEL_OPTIONAL",
+              "type": "TYPE_MESSAGE",
+              "typeName": ".rpx.DashUserSettingsState.URLs",
+              "extendee": "",
+              "defaultValue": "",
+              "oneofIndex": 0,
+              "jsonName": "urls",
+              "proto3Optional": false
+            },
+            {
+              "name": "flashes",
+              "number": 7,
+              "label": "LABEL_REPEATED",
+              "type": "TYPE_MESSAGE",
+              "typeName": ".rpx.DashFlash",
+              "extendee": "",
+              "defaultValue": "",
+              "oneofIndex": 0,
+              "jsonName": "flashes",
+              "proto3Optional": false
+            }
+          ],
+          "extension": [],
+          "nestedType": [
+            {
+              "name": "URLs",
+              "field": [
+                {
+                  "name": "connect_google",
+                  "number": 1,
+                  "label": "LABEL_OPTIONAL",
+                  "type": "TYPE_STRING",
+                  "typeName": "",
+                  "extendee": "",
+                  "defaultValue": "",
+                  "oneofIndex": 0,
+                  "jsonName": "connectGoogle",
+                  "proto3Optional": false
+                },
+                {
+                  "name": "connect_github",
+                  "number": 2,
+                  "label": "LABEL_OPTIONAL",
+                  "type": "TYPE_STRING",
+                  "typeName": "",
+                  "extendee": "",
+                  "defaultValue": "",
+                  "oneofIndex": 0,
+                  "jsonName": "connectGithub",
+                  "proto3Optional": false
+                }
+              ],
+              "extension": [],
+              "nestedType": [],
+              "enumType": [],
+              "extensionRange": [],
+              "oneofDecl": [],
+              "reservedRange": [],
+              "reservedName": []
+            }
+          ],
+          "enumType": [],
+          "extensionRange": [],
+          "oneofDecl": [],
+          "reservedRange": [],
+          "reservedName": []
+        },
+        {
+          "name": "DashCred",
+          "field": [
+            {
+              "name": "description",
+              "number": 2,
+              "label": "LABEL_OPTIONAL",
+              "type": "TYPE_STRING",
+              "typeName": "",
+              "extendee": "",
+              "defaultValue": "",
+              "oneofIndex": 0,
+              "jsonName": "description",
+              "proto3Optional": false
+            },
+            {
+              "name": "metadata",
+              "number": 3,
+              "label": "LABEL_OPTIONAL",
+              "type": "TYPE_STRING",
+              "typeName": "",
+              "extendee": "",
+              "defaultValue": "",
+              "oneofIndex": 0,
+              "jsonName": "metadata",
+              "proto3Optional": false
+            },
+            {
+              "name": "token",
+              "number": 4,
+              "label": "LABEL_OPTIONAL",
+              "type": "TYPE_STRING",
+              "typeName": "",
+              "extendee": "",
+              "defaultValue": "",
+              "oneofIndex": 0,
+              "jsonName": "token",
+              "proto3Optional": false
+            },
+            {
+              "name": "id",
+              "number": 7,
+              "label": "LABEL_OPTIONAL",
+              "type": "TYPE_STRING",
+              "typeName": "",
+              "extendee": "",
+              "defaultValue": "",
+              "oneofIndex": 0,
+              "jsonName": "id",
+              "proto3Optional": false
+            }
+          ],
+          "extension": [],
+          "nestedType": [],
+          "enumType": [],
+          "extensionRange": [],
+          "oneofDecl": [],
+          "reservedRange": [],
+          "reservedName": []
+        },
+        {
+          "name": "DashAPICredsCreateReq",
+          "field": [
+            {
+              "name": "description",
+              "number": 1,
+              "label": "LABEL_OPTIONAL",
+              "type": "TYPE_STRING",
+              "typeName": "",
+              "extendee": "",
+              "defaultValue": "",
+              "oneofIndex": 0,
+              "jsonName": "description",
+              "proto3Optional": false
+            },
+            {
+              "name": "metadata",
+              "number": 2,
+              "label": "LABEL_OPTIONAL",
+              "type": "TYPE_STRING",
+              "typeName": "",
+              "extendee": "",
+              "defaultValue": "",
+              "oneofIndex": 0,
+              "jsonName": "metadata",
+              "proto3Optional": false
+            }
+          ],
+          "extension": [],
+          "nestedType": [],
+          "enumType": [],
+          "extensionRange": [],
+          "oneofDecl": [],
+          "reservedRange": [],
+          "reservedName": []
+        },
+        {
+          "name": "DashAPICredsUpdateReq",
+          "field": [
+            {
+              "name": "cred_sid",
+              "number": 1,
+              "label": "LABEL_OPTIONAL",
+              "type": "TYPE_STRING",
+              "typeName": "",
+              "extendee": "",
+              "defaultValue": "",
+              "oneofIndex": 0,
+              "jsonName": "credSid",
+              "proto3Optional": false
+            },
+            {
+              "name": "description",
+              "number": 2,
+              "label": "LABEL_OPTIONAL",
+              "type": "TYPE_STRING",
+              "typeName": "",
+              "extendee": "",
+              "defaultValue": "",
+              "oneofIndex": 0,
+              "jsonName": "description",
+              "proto3Optional": false
+            },
+            {
+              "name": "metadata",
+              "number": 3,
+              "label": "LABEL_OPTIONAL",
+              "type": "TYPE_STRING",
+              "typeName": "",
+              "extendee": "",
+              "defaultValue": "",
+              "oneofIndex": 0,
+              "jsonName": "metadata",
+              "proto3Optional": false
+            },
+            {
+              "name": "id",
+              "number": 5,
+              "label": "LABEL_OPTIONAL",
+              "type": "TYPE_STRING",
+              "typeName": "",
+              "extendee": "",
+              "defaultValue": "",
+              "oneofIndex": 0,
+              "jsonName": "id",
+              "proto3Optional": false
+            }
+          ],
+          "extension": [],
+          "nestedType": [],
+          "enumType": [],
+          "extensionRange": [],
+          "oneofDecl": [],
+          "reservedRange": [],
+          "reservedName": []
+        },
+        {
+          "name": "DashAPICredsDeleteReq",
+          "field": [
+            {
+              "name": "cred_sid",
+              "number": 1,
+              "label": "LABEL_OPTIONAL",
+              "type": "TYPE_STRING",
+              "typeName": "",
+              "extendee": "",
+              "defaultValue": "",
+              "oneofIndex": 0,
+              "jsonName": "credSid",
+              "proto3Optional": false
+            },
+            {
+              "name": "id",
+              "number": 3,
+              "label": "LABEL_OPTIONAL",
+              "type": "TYPE_STRING",
+              "typeName": "",
+              "extendee": "",
+              "defaultValue": "",
+              "oneofIndex": 0,
+              "jsonName": "id",
+              "proto3Optional": false
+            }
+          ],
+          "extension": [],
+          "nestedType": [],
+          "enumType": [],
+          "extensionRange": [],
+          "oneofDecl": [],
+          "reservedRange": [],
+          "reservedName": []
+        },
+        {
+          "name": "Empty",
+          "field": [],
+          "extension": [],
+          "nestedType": [],
+          "enumType": [],
+          "extensionRange": [],
+          "oneofDecl": [],
+          "reservedRange": [],
+          "reservedName": []
+        }
+      ],
+      "enumType": [],
+      "service": [
+        {
+          "name": "DashState",
+          "method": [
+            {
+              "name": "UserSettings",
+              "inputType": ".rpx.Empty",
+              "outputType": ".rpx.DashUserSettingsState",
+              "clientStreaming": false,
+              "serverStreaming": false
+            },
+            {
+              "name": "ActiveUserSettingsStream",
+              "inputType": ".rpx.Empty",
+              "outputType": ".rpx.DashUserSettingsState",
+              "clientStreaming": false,
+              "serverStreaming": true
+            },
+            {
+              "name": "ChangeUserSettingsStream",
+              "inputType": ".rpx.DashUserSettingsState",
+              "outputType": ".rpx.DashUserSettingsState",
+              "options": {
+                "deprecated": false,
+                "idempotencyLevel": "IDEMPOTENCY_UNKNOWN",
+                "uninterpretedOption": []
+              },
+              "clientStreaming": true,
+              "serverStreaming": true
+            }
+          ]
+        },
+        {
+          "name": "DashAPICreds",
+          "method": [
+            {
+              "name": "Create",
+              "inputType": ".rpx.DashAPICredsCreateReq",
+              "outputType": ".rpx.DashCred",
+              "clientStreaming": false,
+              "serverStreaming": false
+            },
+            {
+              "name": "Update",
+              "inputType": ".rpx.DashAPICredsUpdateReq",
+              "outputType": ".rpx.DashCred",
+              "clientStreaming": false,
+              "serverStreaming": false
+            },
+            {
+              "name": "Delete",
+              "inputType": ".rpx.DashAPICredsDeleteReq",
+              "outputType": ".rpx.DashCred",
+              "clientStreaming": false,
+              "serverStreaming": false
+            }
+          ]
+        }
+      ],
+      "extension": [],
+      "sourceCodeInfo": {
+        "location": [
+          {
+            "path": [],
+            "span": [0, 0, 68, 16],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [12],
+            "span": [0, 0, 18],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [2],
+            "span": [2, 0, 12],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 0],
+            "span": [4, 0, 9, 1],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 0, 1],
+            "span": [4, 8, 17],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 0, 2, 0],
+            "span": [5, 2, 58],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 0, 2, 0, 1],
+            "span": [5, 6, 18],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 0, 2, 0, 2],
+            "span": [5, 19, 24],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 0, 2, 0, 3],
+            "span": [5, 35, 56],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 0, 2, 1],
+            "span": [6, 2, 77],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 0, 2, 1, 1],
+            "span": [6, 6, 30],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 0, 2, 1, 2],
+            "span": [6, 31, 36],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 0, 2, 1, 6],
+            "span": [6, 47, 53],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 0, 2, 1, 3],
+            "span": [6, 54, 75],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 0, 2, 2],
+            "span": [8, 2, 103],
+            "leadingComments": " not supported in grpc-web, but should still compile\n",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 0, 2, 2, 1],
+            "span": [8, 6, 30],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 0, 2, 2, 5],
+            "span": [8, 32, 38],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 0, 2, 2, 2],
+            "span": [8, 39, 60],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 0, 2, 2, 6],
+            "span": [8, 71, 77],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 0, 2, 2, 3],
+            "span": [8, 78, 99],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 0],
+            "span": [11, 0, 21, 1],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 0, 1],
+            "span": [11, 8, 17],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 0, 2, 0],
+            "span": [12, 2, 17],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 0, 2, 0, 5],
+            "span": [12, 2, 8],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 0, 2, 0, 1],
+            "span": [12, 9, 12],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 0, 2, 0, 3],
+            "span": [12, 15, 16],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 0, 2, 1],
+            "span": [13, 2, 16],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 0, 2, 1, 6],
+            "span": [13, 2, 6],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 0, 2, 1, 1],
+            "span": [13, 7, 11],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 0, 2, 1, 3],
+            "span": [13, 14, 15],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 0, 4, 0],
+            "span": [15, 2, 20, 3],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 0, 4, 0, 1],
+            "span": [15, 7, 11],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 0, 4, 0, 2, 0],
+            "span": [16, 4, 18],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 0, 4, 0, 2, 0, 1],
+            "span": [16, 4, 13],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 0, 4, 0, 2, 0, 2],
+            "span": [16, 16, 17],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 0, 4, 0, 2, 1],
+            "span": [17, 4, 16],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 0, 4, 0, 2, 1, 1],
+            "span": [17, 4, 11],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 0, 4, 0, 2, 1, 2],
+            "span": [17, 14, 15],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 0, 4, 0, 2, 2],
+            "span": [18, 4, 13],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 0, 4, 0, 2, 2, 1],
+            "span": [18, 4, 8],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 0, 4, 0, 2, 2, 2],
+            "span": [18, 11, 12],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 0, 4, 0, 2, 3],
+            "span": [19, 4, 14],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 0, 4, 0, 2, 3, 1],
+            "span": [19, 4, 9],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 0, 4, 0, 2, 3, 2],
+            "span": [19, 12, 13],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 1],
+            "span": [23, 0, 32, 1],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 1, 1],
+            "span": [23, 8, 29],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 1, 2, 0],
+            "span": [24, 2, 19],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 1, 2, 0, 5],
+            "span": [24, 2, 8],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 1, 2, 0, 1],
+            "span": [24, 9, 14],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 1, 2, 0, 3],
+            "span": [24, 17, 18],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 1, 2, 1],
+            "span": [25, 2, 16],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 1, 2, 1, 6],
+            "span": [25, 2, 6],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 1, 2, 1, 1],
+            "span": [25, 7, 11],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 1, 2, 1, 3],
+            "span": [25, 14, 15],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 1, 2, 2],
+            "span": [26, 2, 33],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 1, 2, 2, 4],
+            "span": [26, 2, 10],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 1, 2, 2, 6],
+            "span": [26, 11, 20],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 1, 2, 2, 1],
+            "span": [26, 21, 28],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 1, 2, 2, 3],
+            "span": [26, 31, 32],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 1, 3, 0],
+            "span": [28, 2, 31, 3],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 1, 3, 0, 1],
+            "span": [28, 10, 14],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 1, 3, 0, 2, 0],
+            "span": [29, 4, 30],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 1, 3, 0, 2, 0, 5],
+            "span": [29, 4, 10],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 1, 3, 0, 2, 0, 1],
+            "span": [29, 11, 25],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 1, 3, 0, 2, 0, 3],
+            "span": [29, 28, 29],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 1, 3, 0, 2, 1],
+            "span": [30, 4, 30],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 1, 3, 0, 2, 1, 5],
+            "span": [30, 4, 10],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 1, 3, 0, 2, 1, 1],
+            "span": [30, 11, 25],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 1, 3, 0, 2, 1, 3],
+            "span": [30, 28, 29],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 1],
+            "span": [38, 0, 42, 1],
+            "leadingComments": "----------------------\n API Creds\n----------------------\n",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 1, 1],
+            "span": [38, 8, 20],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 1, 2, 0],
+            "span": [39, 2, 55],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 1, 2, 0, 1],
+            "span": [39, 6, 12],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 1, 2, 0, 2],
+            "span": [39, 13, 34],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 1, 2, 0, 3],
+            "span": [39, 45, 53],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 1, 2, 1],
+            "span": [40, 2, 55],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 1, 2, 1, 1],
+            "span": [40, 6, 12],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 1, 2, 1, 2],
+            "span": [40, 13, 34],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 1, 2, 1, 3],
+            "span": [40, 45, 53],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 1, 2, 2],
+            "span": [41, 2, 55],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 1, 2, 2, 1],
+            "span": [41, 6, 12],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 1, 2, 2, 2],
+            "span": [41, 13, 34],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 1, 2, 2, 3],
+            "span": [41, 45, 53],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 2],
+            "span": [44, 0, 49, 1],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 2, 1],
+            "span": [44, 8, 16],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 2, 2, 0],
+            "span": [45, 2, 25],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 2, 2, 0, 5],
+            "span": [45, 2, 8],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 2, 2, 0, 1],
+            "span": [45, 9, 20],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 2, 2, 0, 3],
+            "span": [45, 23, 24],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 2, 2, 1],
+            "span": [46, 2, 22],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 2, 2, 1, 5],
+            "span": [46, 2, 8],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 2, 2, 1, 1],
+            "span": [46, 9, 17],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 2, 2, 1, 3],
+            "span": [46, 20, 21],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 2, 2, 2],
+            "span": [47, 2, 19],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 2, 2, 2, 5],
+            "span": [47, 2, 8],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 2, 2, 2, 1],
+            "span": [47, 9, 14],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 2, 2, 2, 3],
+            "span": [47, 17, 18],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 2, 2, 3],
+            "span": [48, 2, 16],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 2, 2, 3, 5],
+            "span": [48, 2, 8],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 2, 2, 3, 1],
+            "span": [48, 9, 11],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 2, 2, 3, 3],
+            "span": [48, 14, 15],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 3],
+            "span": [51, 0, 54, 1],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 3, 1],
+            "span": [51, 8, 29],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 3, 2, 0],
+            "span": [52, 2, 25],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 3, 2, 0, 5],
+            "span": [52, 2, 8],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 3, 2, 0, 1],
+            "span": [52, 9, 20],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 3, 2, 0, 3],
+            "span": [52, 23, 24],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 3, 2, 1],
+            "span": [53, 2, 22],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 3, 2, 1, 5],
+            "span": [53, 2, 8],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 3, 2, 1, 1],
+            "span": [53, 9, 17],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 3, 2, 1, 3],
+            "span": [53, 20, 21],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 4],
+            "span": [56, 0, 61, 1],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 4, 1],
+            "span": [56, 8, 29],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 4, 2, 0],
+            "span": [57, 2, 22],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 4, 2, 0, 5],
+            "span": [57, 2, 8],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 4, 2, 0, 1],
+            "span": [57, 9, 17],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 4, 2, 0, 3],
+            "span": [57, 20, 21],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 4, 2, 1],
+            "span": [58, 2, 25],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 4, 2, 1, 5],
+            "span": [58, 2, 8],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 4, 2, 1, 1],
+            "span": [58, 9, 20],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 4, 2, 1, 3],
+            "span": [58, 23, 24],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 4, 2, 2],
+            "span": [59, 2, 22],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 4, 2, 2, 5],
+            "span": [59, 2, 8],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 4, 2, 2, 1],
+            "span": [59, 9, 17],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 4, 2, 2, 3],
+            "span": [59, 20, 21],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 4, 2, 3],
+            "span": [60, 2, 16],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 4, 2, 3, 5],
+            "span": [60, 2, 8],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 4, 2, 3, 1],
+            "span": [60, 9, 11],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 4, 2, 3, 3],
+            "span": [60, 14, 15],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 5],
+            "span": [63, 0, 66, 1],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 5, 1],
+            "span": [63, 8, 29],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 5, 2, 0],
+            "span": [64, 2, 22],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 5, 2, 0, 5],
+            "span": [64, 2, 8],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 5, 2, 0, 1],
+            "span": [64, 9, 17],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 5, 2, 0, 3],
+            "span": [64, 20, 21],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 5, 2, 1],
+            "span": [65, 2, 16],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 5, 2, 1, 5],
+            "span": [65, 2, 8],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 5, 2, 1, 1],
+            "span": [65, 9, 11],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 5, 2, 1, 3],
+            "span": [65, 14, 15],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 6],
+            "span": [68, 0, 16],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 6, 1],
+            "span": [68, 8, 13],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          }
+        ]
+      },
+      "syntax": "proto3"
+    }
+  ],
+  "compilerVersion": {
+    "major": 3,
+    "minor": 21,
+    "patch": 5,
+    "suffix": ""
+  }
+}
