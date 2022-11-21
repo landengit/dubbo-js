@@ -15,8 +15,36 @@
  * limitations under the License.
  */
 
-describe(`dubbo-stub test suites`, () => {
-  it('test 1+1=2', () => {
+import { loadCodeGenRequest } from '../util/proto'
+import { join } from 'path'
+import File from '../meta/FIle'
+import ClientStubService from '../scene/client-stub-service'
+import { expect } from 'vitest'
+
+describe(`basic`, () => {
+  it('client demo gen', () => {
+    const request = loadCodeGenRequest(
+      join(__dirname, '../../src/__tests__/protobuf/DemoService.json')
+    )
+    const filesToGenerate = request.protoFile.map((file) => new File(file))
+    for (const file of filesToGenerate) {
+      let serviceItem = new ClientStubService(file)
+      expect(serviceItem.getFilePath()).toMatchInlineSnapshot('"demoservice"')
+      expect(serviceItem.genCode()).toMatchInlineSnapshot(`
+        "export interface HelloRequest {
+            name:string
+        }
+
+        export interface HelloReply {
+            message:string
+        }
+
+        // generate service interface
+        export interface IDemoService {
+        SayHello(helloRequest: HelloRequest): Promise<HelloReply>
+        }"
+      `)
+    }
     expect(1 + 1).toBe(2)
   })
 })

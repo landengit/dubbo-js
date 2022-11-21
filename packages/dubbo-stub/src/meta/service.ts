@@ -6,20 +6,18 @@ export default class Service {
 
   private methods: Method[] = []
 
+  get name() {
+    return this.serviceDesc.name
+  }
+
   getMethods() {
-    if (this.methods) {
+    if (this.methods.length > 0) {
       return this.methods
     } else {
       this.methods = this.serviceDesc.method.map(
         (methodDesc) => new Method(methodDesc)
       )
+      return this.methods
     }
-  }
-
-  /**
-   * 生成方法代码
-   */
-  genCode(): string {
-    return this.methods.map((item) => item.genCode()).join('\n')
   }
 }

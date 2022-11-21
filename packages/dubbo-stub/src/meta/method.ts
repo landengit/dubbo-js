@@ -7,10 +7,13 @@ export default class Method {
     return this.methodDesc.name
   }
 
-  /**
-   * 生成方法代码
-   */
-  genCode(): string {
-    return `${this.name}(): void;`
+  get inputType(): string {
+    let parts = this.methodDesc.inputType.split('.')
+    return parts[parts.length - 1]
+  }
+
+  get outputType(): string {
+    let parts = this.methodDesc.outputType.split('.')
+    return parts[parts.length - 1]
   }
 }
