@@ -1,0 +1,244 @@
+{
+  "fileToGenerate": ["protobuf/first.proto"],
+  "parameter": "exportCommonSymbols=false,unknownFields=true,usePrototypeForDefaults=true",
+  "protoFile": [
+    {
+      "name": "protobuf/first.proto",
+      "package": "multiprotos",
+      "dependency": [],
+      "publicDependency": [],
+      "weakDependency": [],
+      "messageType": [
+        {
+          "name": "FirstRequest",
+          "field": [
+            {
+              "name": "message",
+              "number": 1,
+              "label": "LABEL_OPTIONAL",
+              "type": "TYPE_STRING",
+              "typeName": "",
+              "extendee": "",
+              "defaultValue": "",
+              "oneofIndex": 0,
+              "jsonName": "message",
+              "proto3Optional": false
+            }
+          ],
+          "extension": [],
+          "nestedType": [],
+          "enumType": [],
+          "extensionRange": [],
+          "oneofDecl": [],
+          "reservedRange": [],
+          "reservedName": []
+        },
+        {
+          "name": "FirstResponse",
+          "field": [
+            {
+              "name": "message",
+              "number": 1,
+              "label": "LABEL_OPTIONAL",
+              "type": "TYPE_STRING",
+              "typeName": "",
+              "extendee": "",
+              "defaultValue": "",
+              "oneofIndex": 0,
+              "jsonName": "message",
+              "proto3Optional": false
+            }
+          ],
+          "extension": [],
+          "nestedType": [],
+          "enumType": [],
+          "extensionRange": [],
+          "oneofDecl": [],
+          "reservedRange": [],
+          "reservedName": []
+        }
+      ],
+      "enumType": [],
+      "service": [
+        {
+          "name": "FristService",
+          "method": [
+            {
+              "name": "Service",
+              "inputType": ".multiprotos.FirstRequest",
+              "outputType": ".multiprotos.FirstResponse",
+              "options": {
+                "deprecated": false,
+                "idempotencyLevel": "IDEMPOTENCY_UNKNOWN",
+                "uninterpretedOption": []
+              },
+              "clientStreaming": false,
+              "serverStreaming": false
+            }
+          ]
+        }
+      ],
+      "extension": [],
+      "sourceCodeInfo": {
+        "location": [
+          {
+            "path": [],
+            "span": [17, 0, 31, 1],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [12],
+            "span": [17, 0, 18],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": [
+              "\n Licensed to the Apache Software Foundation (ASF) under one or more\n contributor license agreements.  See the NOTICE file distributed with\n this work for additional information regarding copyright ownership.\n The ASF licenses this file to You under the Apache License, Version 2.0\n (the \"License\"); you may not use this file except in compliance with\n the License.  You may obtain a copy of the License at\n\n     http://www.apache.org/licenses/LICENSE-2.0\n\n Unless required by applicable law or agreed to in writing, software\n distributed under the License is distributed on an \"AS IS\" BASIS,\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n See the License for the specific language governing permissions and\n limitations under the License.\n"
+            ]
+          },
+          {
+            "path": [2],
+            "span": [19, 0, 20],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 0],
+            "span": [21, 0, 23, 1],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 0, 1],
+            "span": [21, 8, 20],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 0, 2, 0],
+            "span": [22, 4, 23],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 0, 2, 0, 5],
+            "span": [22, 4, 10],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 0, 2, 0, 1],
+            "span": [22, 11, 18],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 0, 2, 0, 3],
+            "span": [22, 21, 22],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 1],
+            "span": [25, 0, 27, 1],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 1, 1],
+            "span": [25, 8, 21],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 1, 2, 0],
+            "span": [26, 4, 23],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 1, 2, 0, 5],
+            "span": [26, 4, 10],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 1, 2, 0, 1],
+            "span": [26, 11, 18],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [4, 1, 2, 0, 3],
+            "span": [26, 21, 22],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 0],
+            "span": [29, 0, 31, 1],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 0, 1],
+            "span": [29, 8, 20],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 0, 2, 0],
+            "span": [30, 4, 57],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 0, 2, 0, 1],
+            "span": [30, 8, 15],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 0, 2, 0, 2],
+            "span": [30, 17, 29],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          },
+          {
+            "path": [6, 0, 2, 0, 3],
+            "span": [30, 40, 53],
+            "leadingComments": "",
+            "trailingComments": "",
+            "leadingDetachedComments": []
+          }
+        ]
+      },
+      "syntax": "proto3"
+    }
+  ],
+  "compilerVersion": {
+    "major": 3,
+    "minor": 21,
+    "patch": 5,
+    "suffix": ""
+  }
+}
