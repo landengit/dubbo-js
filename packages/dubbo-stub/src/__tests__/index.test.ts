@@ -19,7 +19,7 @@ import { loadCodeGenRequest } from '../util/proto'
 import { join } from 'path'
 import File from '../meta/FIle'
 import ClientStubService from '../scene/client-stub-service'
-import { expect } from 'vitest'
+// import { expect } from 'vitest'
 
 describe(`basic`, () => {
   it('client demo gen', () => {
@@ -45,6 +45,25 @@ describe(`basic`, () => {
         }"
       `)
     }
-    expect(1 + 1).toBe(2)
+  })
+
+  it('all demo genTest', () => {
+    let allFile = [
+      'DemoService.json', //ok
+      'health.json', //ok
+      'DashAPICreds.json', //ok
+      'reflection.json' //ok anyone 未处理
+    ]
+
+    for (const fileName of allFile) {
+      const request = loadCodeGenRequest(
+        join(__dirname, '../../src/__tests__/protobuf/' + fileName)
+      )
+      const filesToGenerate = request.protoFile.map((file) => new File(file))
+      for (const file of filesToGenerate) {
+        let serviceItem = new ClientStubService(file)
+        expect(serviceItem.genCode()).toMatchSnapshot(fileName)
+      }
+    }
   })
 })

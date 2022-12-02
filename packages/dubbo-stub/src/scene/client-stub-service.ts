@@ -3,6 +3,8 @@ import Proto from '../meta/proto'
 import Service from '../meta/service'
 import Method from '../meta/method'
 import { lowerFirst } from '../util/utils'
+import { EnumDescriptorProto } from 'ts-proto-descriptors/dist/google/protobuf/descriptor'
+import ProtoEnum from '../meta/proto-enum'
 
 export default class ClientStubService {
   constructor(private fileMeta: File) {}
@@ -16,7 +18,9 @@ export default class ClientStubService {
 
   genCode(): string {
     let chunks: string[] = genProtoTypes(this.fileMeta)
+    chunks.push(...genEnums(this.fileMeta.getEnums()))
     chunks.push(...genServices(this.fileMeta))
+    debugger
     return chunks.join('\n\n')
   }
 }
@@ -27,7 +31,7 @@ function genServices(fileMeta: File): string[] {
 function genService(serviceItem: Service) {
   return `// generate service interface
 export interface I${serviceItem.name} {
-${serviceItem.getMethods().map(genMethod).join('/n/n')}
+${serviceItem.getMethods().map(genMethod).join('\n\n')}
 }`
 }
 
@@ -53,4 +57,18 @@ function genProtoType(proto: Proto) {
   return `export interface ${proto.name} {
     ${fields.join('\n\n')}
 }`
+}
+
+function genEnums(enums: ProtoEnum[]): string[] {
+  return enums.map(genEnum)
+}
+
+function genEnum(enumItem: ProtoEnum) {
+  return ` export enum ${enumItem.name} {
+  UNKNOWN = 0,
+  SERVING = 1,
+  NOT_SERVING = 2,
+  SERVICE_UNKNOWN = 3
+}
+`
 }

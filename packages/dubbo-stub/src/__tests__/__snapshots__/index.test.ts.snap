@@ -1,0 +1,190 @@
+// Vitest Snapshot v1
+
+exports[`basic > all demo genTest > DashAPICreds.json 1`] = `
+"export interface DashFlash {
+    msg:string
+
+type:Type
+}
+
+export interface DashUserSettingsState {
+    email:string
+
+urls:URLs
+
+flashes:DashFlash
+}
+
+export interface DashCred {
+    description:string
+
+metadata:string
+
+token:string
+
+id:string
+}
+
+export interface DashAPICredsCreateReq {
+    description:string
+
+metadata:string
+}
+
+export interface DashAPICredsUpdateReq {
+    cred_sid:string
+
+description:string
+
+metadata:string
+
+id:string
+}
+
+export interface DashAPICredsDeleteReq {
+    cred_sid:string
+
+id:string
+}
+
+export interface Empty {
+    
+}
+
+export interface URLs {
+    connect_google:string
+
+connect_github:string
+}
+
+ export enum Type {
+  UNKNOWN = 0,
+  SERVING = 1,
+  NOT_SERVING = 2,
+  SERVICE_UNKNOWN = 3
+}
+
+
+// generate service interface
+export interface IDashState {
+UserSettings(empty: Empty): Promise<DashUserSettingsState>
+
+ActiveUserSettingsStream(empty: Empty): Promise<DashUserSettingsState>
+
+ChangeUserSettingsStream(dashUserSettingsState: DashUserSettingsState): Promise<DashUserSettingsState>
+}
+
+// generate service interface
+export interface IDashAPICreds {
+Create(dashAPICredsCreateReq: DashAPICredsCreateReq): Promise<DashCred>
+
+Update(dashAPICredsUpdateReq: DashAPICredsUpdateReq): Promise<DashCred>
+
+Delete(dashAPICredsDeleteReq: DashAPICredsDeleteReq): Promise<DashCred>
+}"
+`;
+
+exports[`basic > all demo genTest > DemoService.json 1`] = `
+"export interface HelloRequest {
+    name:string
+}
+
+export interface HelloReply {
+    message:string
+}
+
+// generate service interface
+export interface IDemoService {
+SayHello(helloRequest: HelloRequest): Promise<HelloReply>
+}"
+`;
+
+exports[`basic > all demo genTest > health.json 1`] = `
+"export interface HealthCheckRequest {
+    service:string
+}
+
+export interface HealthCheckResponse {
+    status:ServingStatus
+}
+
+ export enum ServingStatus {
+  UNKNOWN = 0,
+  SERVING = 1,
+  NOT_SERVING = 2,
+  SERVICE_UNKNOWN = 3
+}
+
+
+// generate service interface
+export interface IHealth {
+Check(healthCheckRequest: HealthCheckRequest): Promise<HealthCheckResponse>
+
+Watch(healthCheckRequest: HealthCheckRequest): Promise<HealthCheckResponse>
+}"
+`;
+
+exports[`basic > all demo genTest > reflection.json 1`] = `
+"export interface ServerReflectionRequest {
+    host:string
+
+file_by_filename:string
+
+file_containing_symbol:string
+
+file_containing_extension:ExtensionRequest
+
+all_extension_numbers_of_type:string
+
+list_services:string
+}
+
+export interface ExtensionRequest {
+    containing_type:string
+
+extension_number:number
+}
+
+export interface ServerReflectionResponse {
+    valid_host:string
+
+original_request:ServerReflectionRequest
+
+file_descriptor_response:FileDescriptorResponse
+
+all_extension_numbers_response:ExtensionNumberResponse
+
+list_services_response:ListServiceResponse
+
+error_response:ErrorResponse
+}
+
+export interface FileDescriptorResponse {
+    file_descriptor_proto:Uint8Array
+}
+
+export interface ExtensionNumberResponse {
+    base_type_name:string
+
+extension_number:number
+}
+
+export interface ListServiceResponse {
+    service:ServiceResponse
+}
+
+export interface ServiceResponse {
+    name:string
+}
+
+export interface ErrorResponse {
+    error_code:number
+
+error_message:string
+}
+
+// generate service interface
+export interface IServerReflection {
+ServerReflectionInfo(serverReflectionRequest: ServerReflectionRequest): Promise<ServerReflectionResponse>
+}"
+`;

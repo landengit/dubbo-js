@@ -1,6 +1,7 @@
 import { FileDescriptorProto } from 'ts-proto-descriptors/dist/google/protobuf/descriptor'
 import Service from './service'
 import Proto from './proto'
+import ProtoEnum from './proto-enum'
 
 export default class File {
   constructor(private fileDesc: FileDescriptorProto) {}
@@ -34,8 +35,29 @@ export default class File {
       this.protos = this.fileDesc.messageType.map(
         (messageType) => new Proto(messageType)
       )
+      let nestType = this.protos
+        .map((item) => item.getNestedProtos())
+        .reduce((acc, next) => {
+          acc.push(...next)
+          return acc
+        }, [])
+      this.protos.push(...nestType)
       return this.protos
     }
+  }
+
+  getEnums(): ProtoEnum[] {
+    let allEnums = [
+      ...this.fileDesc.enumType.map((item) => new ProtoEnum(item)),
+      ...this.getProtos()
+        .map((item) => item.getEnums())
+        .reduce((acc, next) => {
+          acc.push(...next)
+          return acc
+        }, [])
+    ]
+
+    return allEnums
   }
 
   get path(): string {

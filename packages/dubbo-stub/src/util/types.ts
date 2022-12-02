@@ -104,7 +104,7 @@ export function basicTypeName(
     case FieldDescriptorProto_Type.TYPE_STRING:
       return `string`
     case FieldDescriptorProto_Type.TYPE_BYTES:
-      if (options.env === EnvOption.NODE) {
+      if (options?.env === EnvOption.NODE) {
         return `Buffer`
       } else {
         return `Uint8Array`
@@ -238,7 +238,7 @@ export function defaultValue(ctx: Context, field: FieldDescriptorProto): any {
     case FieldDescriptorProto_Type.TYPE_STRING:
       return '""'
     case FieldDescriptorProto_Type.TYPE_BYTES:
-      if (options.env === EnvOption.NODE) {
+      if (options?.env === EnvOption.NODE) {
         return 'Buffer.alloc(0)'
       } else {
         return 'new Uint8Array()'
@@ -637,7 +637,7 @@ export function messageToTypeName(
   // need to use endsWith instead of === because objectid could be imported from an external proto file
   if (
     !typeOptions.keepValueType &&
-    options.useMongoObjectId &&
+    options?.useMongoObjectId &&
     protoType.endsWith('.ObjectId')
   ) {
     return `mongodb.ObjectId`
@@ -651,7 +651,7 @@ function toModuleAndType(
   typeMap: TypeMap,
   protoType: string
 ): [string, string, DescriptorProto | EnumDescriptorProto] {
-  return typeMap.get(protoType) || fail(`No type found for ${protoType}`)
+  return typeMap?.get(protoType) || fail(`No type found for ${protoType}`)
 }
 
 export function getEnumMethod(
